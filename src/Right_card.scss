@@ -1,0 +1,152 @@
+
+
+
+.right_card {
+	height: 90vh;
+	width: 50vw;
+	border-radius: 2px;
+	border: solid white;
+	overflow: hidden !important;
+	position: absolute;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+
+	div {
+		background-color: transparent;
+		padding-bottom: 2rem;
+		z-index: 2;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+
+
+		i {
+			background-color: transparent;
+			color: white;
+			font-size: 8rem;
+			margin: 3rem 0rem;
+			animation: zoomanimation 5s infinite linear alternate;
+		}
+
+
+		@keyframes zoomanimation {
+			0% {
+				font-size: 10rem;
+			}
+
+			100% {
+				font-size: 8rem;
+			}
+		}
+
+		h1 {
+			background-color: transparent;
+			color: #65B6BC;
+			font-size: 4.5rem;
+			font-family: 'Lobster', cursive;
+			margin-top: 2rem;
+			margin-top: auto;
+		}
+
+
+		h2 {
+			background-color: transparent;
+			color: #65B6BC;
+			font-size: 4rem;
+			font-family: 'Lobster', cursive;
+			margin-top: 2rem;
+
+			span {
+				background-color: transparent;
+			}
+		}
+
+
+		p {
+			margin: 0 !important;
+			color: grey;
+			font-size: 1.5rem;
+			background-color: transparent;
+		}
+	}
+
+
+	.one {
+		outline: none;
+		border: none;
+		border-radius: 42%;
+		z-index: 1;
+		background-color: white;
+		width: 80rem;
+		height: 80rem;
+		position: absolute;
+		top: 15rem;
+		box-shadow: 0px 0px 10px 15px white;
+		opacity: .7;
+		margin-right: 10rem;
+		animation: spin 19s infinite linear;
+	}
+
+	.two {
+		outline: none;
+		border: none;
+		border-radius: 40%;
+		z-index: 1;
+		background-color: white;
+		width: 80rem;
+		height: 80rem;
+		position: absolute;
+		top: 15rem;
+		box-shadow: 0px 0px 10px 15px white;
+		opacity: .5;
+		margin-left: 10rem;
+		animation: spin 14s infinite linear;
+	}
+
+	.three {
+		outline: none;
+		border: none;
+		border-radius: 45%;
+		z-index: 1;
+		background-color: white;
+		width: 80rem;
+		height: 80rem;
+		position: absolute;
+		top: 15rem;
+		box-shadow: 0px 0px 10px 15px white;
+		opacity: .4;
+		margin-right: 10rem;
+		animation: spino 10s infinite linear;
+	}
+
+	.four {
+		outline: none;
+		border: none;
+		border-radius: 38%;
+		z-index: 1;
+		background-color: white;
+		width: 80rem;
+		height: 80rem;
+		position: absolute;
+		top: 15rem;
+		box-shadow: 0px 0px 10px 15px white;
+		opacity: .3;
+		margin-left: 10rem;
+		animation: spino 7s infinite linear;
+	}
+
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}

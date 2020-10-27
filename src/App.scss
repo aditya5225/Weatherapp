@@ -1,0 +1,34 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+
+.bor {
+	border: solid red 1px;
+}
+
+
+* {
+	box-sizing: border-box;
+	font-size: 100%;
+	background-color: #65B6BC;
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+.app {
+
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+
+
+	.Right_box {
+		/*border: solid;*/
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+	}
+
+}
