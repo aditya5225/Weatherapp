@@ -1,8 +1,8 @@
 
 import React from 'react';
-import './App.scss';
-import Left_box from './Left_box';
-import Right_card from './Right_card';
+import './SCSS/App.scss';
+import Left_box from './Components/Left_box';
+import Right_card from './Components/Right_card';
 
 
 const App = () => {
