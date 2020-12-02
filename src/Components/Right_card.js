@@ -23,11 +23,15 @@ const Right_card = () => {
 	return (
 		<div className='right_card'>
 			<div>
-				<i className={weatherIcon[weather.weather_type]}></i>
-				<h1> <span> {weather.city} </span> / <span> {weather.country} </span> </h1>
-				<p> <span> {weather.day} </span> / <span> {weather.date} </span> / <span> {weather.time} </span> </p>
-				<h2> {weather.temp} <span> &#8451; </span> </h2>
-				<p> <span> Min: {weather.min_temp} </span> / <span> Min: {weather.max_temp} </span> </p>
+				<div className='fontawsome'>
+					<i className={weatherIcon[weather.weather_type]}></i>
+				</div>
+				<div className= 'weather_body'>
+					<h1> <span> {weather.city} </span> / <span> {weather.country} </span> </h1>
+					<p> <span> {weather.day} </span> / <span> {weather.date} </span> / <span> {weather.time} </span> </p>
+					<h2> {weather.temp} <span> &#8451; </span> </h2>
+					<p> <span> Min: {weather.min_temp} </span> / <span> Min: {weather.max_temp} </span> </p>
+				</div>
 			</div>
 
 			<div className='one'></div>

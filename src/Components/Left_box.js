@@ -46,7 +46,7 @@ const Left_box = () => {
 		<div className='left_card'>
 			<div>
 				<h1> Weather App </h1>
-				<input ref={Input_city} onKeyPress={cityHandleKeyPress} type='text' placeholder='Enter City Name' />
+				<input ref={Input_city} onKeyPress={cityHandleKeyPress} type='text' placeholder='Enter City Name' /> <br />
 				<button onClick={getCity}> GET WEATHER </button>
 			</div>
 		</div>
