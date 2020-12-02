@@ -32,6 +32,7 @@ const Left_box = () => {
 			console.log(location);
 
 			const result = await dispatch(Add_city(location));
+			
 			await dispatch(Get_weather_data(location));
 
 		} else {

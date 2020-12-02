@@ -12,7 +12,7 @@ export const Get_weather_data = (city_name) => {
     return async (dispatch) => {
         try {
             dispatch(Data_loading());
-            const result = await Axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=143c1d8dda3fbf06c2b57f70f5bf87aa`)
+            const result = await Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=143c1d8dda3fbf06c2b57f70f5bf87aa`)
             dispatch({
                 type: GET_WEATHER_DATA,
                 payload: result.data
