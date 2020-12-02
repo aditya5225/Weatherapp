@@ -1,6 +1,6 @@
 import {ADD_CITY} from '../Constants/constants';
 
-const intState= 'mumbai';
+const intState= 'local';
 
 
 export const city = (state= intState, action) => {
