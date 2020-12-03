@@ -1,13 +1,13 @@
 
 import React, { useRef, useEffect } from 'react';
 import './../SCSS/Left_box.scss';
+import Axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { Get_weather_data, Add_city, current_location } from '../Redux/Actions/action';
+import { Get_weather_data, Add_city } from '../Redux/Actions/action';
 
 
 const Left_box = () => {
 
-	const location = useSelector(state => state.current_location.location)
 	const city = useSelector(state => state.city);
 
 	const dispatch = useDispatch();
@@ -26,20 +26,41 @@ const Left_box = () => {
 		Input_city.current.value = '';
 	}
 
-	useEffect(async () => {
+
+	useEffect(() => {
+
 		if (city == 'local') {
-			await dispatch(current_location());
-			console.log(location);
 
-			const result = await dispatch(Add_city(location));
-			
-			await dispatch(Get_weather_data(location));
+			const showLocation = async position => {
+				try {
+					const res = await Axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=143c1d8dda3fbf06c2b57f70f5bf87aa`)
+					let local = res.data.name;
+					dispatch(Add_city(local));
+				} catch (err) {
+					console.log(err);
+				}
+			}
 
-		} else {
-			await dispatch(Get_weather_data(city));
-			console.log('lol')
+			const errorHandler = (err) => {
+				if (err.code == 1) {
+					alert("Error: Please Allow location access or Enter a city name!!");
+				} else if (err.code == 2) {
+					alert("Error: Position is unavailable!");
+				}
+			}
+
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showLocation, errorHandler);
+			} else {
+				alert("Sorry, browser does not support geolocation!");
+			}
 		}
-	}, [city, location])
+		else {
+			dispatch(Get_weather_data(city));
+		}
+
+	}, [city])
+
 
 
 	return (
