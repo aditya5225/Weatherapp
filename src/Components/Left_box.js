@@ -29,6 +29,8 @@ const Left_box = () => {
 
 	useEffect(() => {
 
+		Input_city.current.focus();
+
 		if (city == 'local') {
 
 			const showLocation = async position => {
