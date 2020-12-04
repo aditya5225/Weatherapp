@@ -15,12 +15,13 @@ const Right_card = () => {
 		Clear: "fas fa-cloud-sun",
 		Haze: "fas fa-sun-haze",
 		Clouds: "fas fa-clouds",
-		Mist: "fas fa-fog"
+		Mist: "fas fa-fog",
+		Fog: "fad fa-fog"
 	}
 
 	const weather = useSelector(state => state.weather);
 
-	// console.log(weather.weather_type);
+	console.log(weather.weather_type);
 
 
 	return (
